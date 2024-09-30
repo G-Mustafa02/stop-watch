@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blue;
+        }
+        .container{
+            background-color: white;
+            width: 40%;
+            height: 400px;
+            margin-left: 30%;
+            margin-top: 10%;
+            border-radius: 30px;
+        }
+        .timer-display{
+            width: 80%;
+            background-color: rgb(175, 175, 145);
+            height: 200px;
+            margin-left: 10%;
+            padding-top: 100px;
+            box-shadow: 10px 10px 10px;
+            text-align: center;
+            font-size: 60px;
+            border-radius: 30px;
+        }
+        .buttons{
+            width: 90%;
+            margin: 60px auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            width: 120px;
+            height: 45px;
+            background-color: rgb(49, 49, 224);
+            color: white;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+        .buttons button:nth-last-child(2){
+            background-color: orangered;
+        }
+        .buttons button:nth-last-child(1){
+            background-color: rgb(255, 230, 0);
+        }
+        .buttons button:hover{
+            box-shadow: 0 0 20px rgb(19, 15, 15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="timer-display">
+             <span id="hrs">00</span>:<span id="min">00</span>:<span id="sec">00</span> 
+        </div>
+        <div class="buttons">
+            <button onclick="start()" id="start-timer">start</button>
+            <button onclick="stop()" id="pause-timer">pause</button>
+            <button onclick="reset()" id="reset-timer">reset</button>
+        </div>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
